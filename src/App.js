@@ -55,6 +55,12 @@ function NavBar() {
 
   return (
     <nav className="nav-bar">
+      <Logo />
+      <Search />
+      <NumResults />
+    </nav>
+  );
+}
 
 function Logo() {
   return (
