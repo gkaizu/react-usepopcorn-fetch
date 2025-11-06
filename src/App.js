@@ -51,8 +51,6 @@ const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
 function NavBar() {
-  const [query, setQuery] = useState("");
-
   return (
     <nav className="nav-bar">
       <Logo />
@@ -64,10 +62,10 @@ function NavBar() {
 
 function Logo() {
   return (
-      <div className="logo">
-        <span role="img">🍿</span>
-        <h1>usePopcorn</h1>
-      </div>
+    <div className="logo">
+      <span role="img">🍿</span>
+      <h1>usePopcorn</h1>
+    </div>
   );
 }
 
@@ -75,21 +73,21 @@ function Search() {
   const [query, setQuery] = useState("");
 
   return (
-      <input
-        className="search"
-        type="text"
-        placeholder="Search movies..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
+    <input
+      className="search"
+      type="text"
+      placeholder="Search movies..."
+      value={query}
+      onChange={(e) => setQuery(e.target.value)}
+    />
   );
 }
 
 function NumResults() {
   return (
-      <p className="num-results">
-        Found <strong>X</strong> results
-      </p>
+    <p className="num-results">
+      Found <strong>X</strong> results
+    </p>
   );
 }
 
@@ -191,7 +189,6 @@ function Main() {
 }
 
 export default function App() {
-
   return (
     <>
       <NavBar />
